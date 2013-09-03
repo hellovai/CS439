@@ -1,0 +1,34 @@
+Homework #: 1
+Student Name: Vaibhav Gupta
+EID: vg6663
+CS login: vgupta
+Email address: vaibhavgupta@utexas.edu
+Unique Number: 53915
+
+1. loader
+
+2. // Begin code
+#include <stdio.h>
+
+void printHello(int);
+
+int main() {
+	int x = 0;
+	printf("Enter a number: ");
+	scanf("%d", &x);
+	printHello(x);
+	return 0;
+}
+
+void printHello(int count) {
+	if(count > 1)
+		printHello(count-1);
+	printf("Hello World!\n");
+}
+
+// End code
+
+3. gcc <filename> -g -O0 -o hello
+
+4. gdb hello
+break printHello
